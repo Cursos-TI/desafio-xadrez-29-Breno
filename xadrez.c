@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int main() {
+
     // usando FOR para o movimento da Torre
     // A Torre move em linha reta horizontalmente ou verticalmente.
     // Ela moverá 5 casas para a direita.
@@ -31,7 +32,24 @@ int main() {
         R++;
     } while (R <= 8);
 
+    printf("\n");
+
+    //Movimento do Cavalo
+    //o Cavalo pode mover duas para baixo e uma para a esquerda
+    printf("Movimento do Cavalo (Duas casas para Baixo e uma para Esquerda):\n");
+    for (int C = 1; C <= 2; C++) {
+        printf("Casa: %d - Baixo \n", C);
+
+        while(C >= 2 && C <= 3)
+        {
+            printf("Casa: %d - Esquerda \n", C);
+
+            C++;
+        }
+
+
+    }
+
+
     return 0;
 }
-
-

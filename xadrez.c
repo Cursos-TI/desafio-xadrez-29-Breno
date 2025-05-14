@@ -37,17 +37,15 @@ int main() {
     //Movimento do Cavalo
     //o Cavalo pode mover duas para baixo e uma para a esquerda
     printf("Movimento do Cavalo (Duas casas para Baixo e uma para Esquerda):\n");
-    for (int C = 1; C <= 2; C++) {
+    for (int C = 1; C <= 2; C++)
+        {
         printf("Casa: %d - Baixo \n", C);
 
-        while(C >= 2 && C <= 3)
-        {
-            printf("Casa: %d - Esquerda \n", C);
-
-            C++;
+        int j = 1;
+        while (C == 2 && j <= 1) {
+            printf("Casa: %d - Esquerda\n", C + j); // apenas para visualização
+            j++;
         }
-
-
     }
 
 

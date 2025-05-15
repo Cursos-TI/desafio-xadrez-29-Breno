@@ -1,36 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+    void recursiveTorre(int T)
+    {
+        if(T > 0)
+        {
+            recursiveTorre(T - 1);
+
+            printf("Casa: %d - Direita \n", T);//Printf após recursiveTorre(T - 1) para ele exibir do menor para maior se adicionado antes ele exibe do maior para menor
+        }
+    };
+
+    void recursiveBispo(int B)
+    {
+        if(B > 0)
+        {
+            recursiveBispo(B - 1);
+
+            printf("Casa: %d - Cima Direita\n", B);
+        }
+
+    };
+
+    void recursiveRainha(int R)
+    {
+        if (R > 0)
+        {
+            recursiveRainha(R - 1);
+
+            printf("Casa: %d - Esquerda\n", R);
+        }
+    };
+
 int main() {
 
-    // usando FOR para o movimento da Torre
     // A Torre move em linha reta horizontalmente ou verticalmente.
     // Ela moverá 5 casas para a direita.
     printf("Movimento da Torre (5 casas para a direita):\n");
-    for (int T = 1; T <= 5; T++) {
-        printf("Casa: %d - Direita \n", T);
-    }
+
+    int Torre = 5;
+    recursiveTorre(Torre);
+
     printf("\n");
 
-    // Movimento do Bispo usando WHILE
     // O Bispo move na diagonal. Aqui, moverá 5 casas na diagonal para cima e à direita.
     printf("Movimento do Bispo (5 casas na diagonal - cima e direita):\n");
-    int B = 1;
-    while (B <= 5) {
-        printf("Casa: %d - Cima Direita\n", B);
-        B++;
-    }
+
+    int Bispo = 5;
+    recursiveBispo(Bispo);
+
+
     printf("\n");
 
-    // Movimento da Rainha usando DO-WHILE
     // A Rainha pode mover em todas as direções.
     // Moverá 8 casas para a esquerda.
     printf("Movimento da Rainha (8 casas para a esquerda):\n");
-    int R = 1;
-    do {
-        printf("Casa: %d - Esquerda\n", R);
-        R++;
-    } while (R <= 8);
+
+    int Rainha = 8;
+    recursiveRainha(Rainha);
 
     printf("\n");
 

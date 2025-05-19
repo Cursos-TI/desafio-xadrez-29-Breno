@@ -25,6 +25,20 @@
         }
     }
 
+    void recursiveCavalo(int C) {
+
+          for (int C = 1; C <= 2; C++)
+        {
+        printf("Casa: %d - Cima \n", C);
+
+        int j = 1;
+        while (C == 2 && j <= 1) {
+            printf("Casa: %d - Direita\n", C + j); // apenas para visualização
+            j++;
+        }
+    }
+    }
+
     void recursiveRainha(int R)
     {
         if (R > 0)
@@ -40,6 +54,7 @@ int main() {
     int Torre = 5;
     int Rainha = 8;
     int Bispo = 5;
+    int Cavalo = 0;
 
     printf("Movimento da Torre (5 casas para a direita):\n");
     recursiveTorre(Torre);
@@ -56,17 +71,10 @@ int main() {
     printf("\n");
 
 
-    printf("Movimento do Cavalo (Duas casas para Baixo e uma para Esquerda):\n");
-    for (int C = 1; C <= 2; C++)
-        {
-        printf("Casa: %d - Baixo \n", C);
+    printf("Movimento do Cavalo (Duas casas para cima e uma para a direita):\n");
+    recursiveCavalo(Cavalo);
+    printf("\n");
 
-        int j = 1;
-        while (C == 2 && j <= 1) {
-            printf("Casa: %d - Esquerda\n", C + j); // apenas para visualização
-            j++;
-        }
-    }
 
 
     return 0;
